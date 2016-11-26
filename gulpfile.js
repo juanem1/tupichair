@@ -1,6 +1,10 @@
 const elixir = require('laravel-elixir');
+const inject = require('./gulp/inject');
 
 elixir((mix) => {
+
+  // Copy index to public folder
+  mix.copy('index.html', 'public/index.html');
 
   // Mix styles
   mix.sass('app.scss', 'public/css/app.css');
@@ -11,13 +15,12 @@ elixir((mix) => {
     'app.js'
   ], 'public/js/app.js');
 
-  // Copy index to public folder
-  mix.copy('index.html', 'public/index.html');
-
   // Versioning files
-  //mix.version([
-  //  'css/app.css',
-  //  'js/app.js'
-  //]);
+  mix.version([
+    'css/app.css',
+    'js/app.js'
+  ]);
+
+  mix.inject(['css/app.css', 'js/app.js']);
 
 });
