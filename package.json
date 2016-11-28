@@ -10,7 +10,8 @@
     "url": "git+https://github.com/juanem1/tupichair.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd public && python -m SimpleHTTPServer 8080"
   },
   "keywords": [],
   "license": "MIT",
