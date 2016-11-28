@@ -1,2 +1,62 @@
-@import '../../../node_modules/bulma/bulma';
-@import 'site';
+// General 
+body {
+    background-color: #F3F3F3;
+}
+@mixin paralax($color) {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: transparent;
+    border-top: 100vh solid transparent;
+    color: $color;
+    margin-bottom: -750px;
+    min-height: 100%;
+    position: absolute;
+    width: 60%;
+}
+// Intro
+.intro {
+    &.hero {
+        background-color: #1D1D1F;
+    }
+    .image {
+        margin: 0 auto;
+        height: 400px;
+        width: 400px;
+    }
+}
+// Concept
+.concept {
+    background-color: #FFF;
+    .background {
+        background-image: url('/img/Tupi_01.jpg');
+        border-left-color: #FFF;
+        border-left: 200px solid;
+        right: 0;
+        @include paralax(#FFF);
+    }
+    .content {
+        color: #4a4a4a;
+        height: 100vh;
+        padding: 25vh 5%;
+        width: 40%;
+    }
+}
+// Product
+.product {
+    background-color: #1D1D1F;
+    .background {
+        background-image: url('/img/Tupi_02.jpg');
+        border-right-color: #1D1D1F;
+        border-right: 200px solid;
+        left: 0;
+        @include paralax(#1D1D1F);
+    }
+    .content {
+        color: #4a4a4a;
+        height: 100vh;
+        padding: 25vh 5%;
+        width: 40%;
+    }
+}
+

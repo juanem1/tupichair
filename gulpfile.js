@@ -6,8 +6,15 @@ elixir((mix) => {
   // Copy index to public folder
   mix.copy('index.html', 'public/index.html');
 
-  // Mix styles
+  // Mix sass styles
   mix.sass('app.scss', 'public/css/app.css');
+
+  // Mix css styles
+  mix.styles([
+    './node_modules/bulma/css/bulma.css',
+    './node_modules/animate.css/animate.min.css',
+    './public/css/app.css'
+  ], 'public/css/app.css');
 
   // Mix scripts
   mix.scripts([
