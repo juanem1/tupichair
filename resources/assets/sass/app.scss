@@ -1,2 +1,92 @@
-@import '../../../node_modules/bulma/bulma';
-@import 'site';
+// Variables
+$mainDark: #1D1D1F;
+$background: #F3F3F3;
+
+// General 
+body {
+    background-color: $background;
+}
+@mixin paralax($color) {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: transparent;
+    border-top: 100vh solid transparent;
+    color: $color;
+    margin-bottom: -750px;
+    min-height: 100%;
+    position: absolute;
+    width: 60%;
+}
+
+// Intro
+.intro {
+    &.hero {
+        background-color: $mainDark;
+    }
+    .image {
+        margin: 0 auto;
+        height: 400px;
+        width: 400px;
+    }
+}
+
+// Concept
+.concept {
+    background-color: $mainDark;
+    .background {
+        background-image: url('/img/Tupi_01.jpg');
+        border-left-color: $mainDark;
+        border-left: 200px solid;
+        right: 0;
+        @include paralax($mainDark);
+    }
+    .hero-body {
+        max-width: 41%;
+    }
+    .container {
+        padding: 0 25px;
+    }
+    .container,
+    .subtitle {
+        color: $background;
+    }
+}
+
+// Gallery
+.gallery {
+    .container {
+        padding-top: 40px;
+    }
+    .image {
+        box-shadow: 0 12px 12px -10px rgba(35, 32, 39, 0.2);
+        overflow: hidden;
+    }
+    img {
+        transition: 300ms ease-in-out;
+    }
+    figure:hover img {
+        transform: scale(1.1, 1.1);
+    }
+    
+}
+
+// Product
+.product {
+    .background {
+        background-image: url('/img/product.jpg');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+// Contact
+.contact {
+    .uppercase {
+        text-transform: uppercase;
+    }
+}
