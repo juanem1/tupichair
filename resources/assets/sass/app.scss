@@ -1,6 +1,10 @@
+// Variables
+$mainDark: #1D1D1F;
+$background: #F3F3F3;
+
 // General 
 body {
-    background-color: #F3F3F3;
+    background-color: $background;
 }
 @mixin paralax($color) {
     background-attachment: fixed;
@@ -14,10 +18,11 @@ body {
     position: absolute;
     width: 60%;
 }
+
 // Intro
 .intro {
     &.hero {
-        background-color: #1D1D1F;
+        background-color: $mainDark;
     }
     .image {
         margin: 0 auto;
@@ -25,38 +30,63 @@ body {
         width: 400px;
     }
 }
+
 // Concept
 .concept {
-    background-color: #FFF;
+    background-color: $mainDark;
     .background {
         background-image: url('/img/Tupi_01.jpg');
-        border-left-color: #FFF;
+        border-left-color: $mainDark;
         border-left: 200px solid;
         right: 0;
-        @include paralax(#FFF);
+        @include paralax($mainDark);
     }
-    .content {
-        color: #4a4a4a;
-        height: 100vh;
-        padding: 25vh 5%;
-        width: 40%;
+    .hero-body {
+        max-width: 41%;
     }
-}
-// Product
-.product {
-    background-color: #1D1D1F;
-    .background {
-        background-image: url('/img/Tupi_02.jpg');
-        border-right-color: #1D1D1F;
-        border-right: 200px solid;
-        left: 0;
-        @include paralax(#1D1D1F);
+    .container {
+        padding: 0 25px;
     }
-    .content {
-        color: #4a4a4a;
-        height: 100vh;
-        padding: 25vh 5%;
-        width: 40%;
+    .container,
+    .subtitle {
+        color: $background;
     }
 }
 
+// Gallery
+.gallery {
+    .container {
+        padding-top: 40px;
+    }
+    .image {
+        box-shadow: 0 12px 12px -10px rgba(35, 32, 39, 0.2);
+        overflow: hidden;
+    }
+    img {
+        transition: 300ms ease-in-out;
+    }
+    figure:hover img {
+        transform: scale(1.1, 1.1);
+    }
+    
+}
+
+// Product
+.product {
+    .background {
+        background-image: url('/img/product.jpg');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+// Contact
+.contact {
+    .uppercase {
+        text-transform: uppercase;
+    }
+}
