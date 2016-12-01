@@ -39,6 +39,14 @@
             src: '/img/Tupi_09.jpg',
             w: 1988,
             h: 1323
+        }, {
+            src: '/img/Tupi_10.jpg',
+            w: 1280,
+            h: 898
+        }, {
+            src: '/img/Tupi_11.jpg',
+            w: 1024,
+            h: 718
         }
     ];
 
