@@ -7292,7 +7292,23 @@ body {
   width: 100%;
 }
 
-.contact .uppercase {
+.footer {
+  padding: 40px 20px 40px;
+}
+
+.footer a {
+  color: #4a4a4a;
+}
+
+.footer a:not(.icon):hover {
+  border-bottom-color: #4a4a4a !important;
+}
+
+.footer a:not(.button):visited {
+  color: #4a4a4a;
+}
+
+.footer .uppercase {
   text-transform: uppercase;
 }
 

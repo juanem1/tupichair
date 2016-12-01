@@ -27,6 +27,18 @@
             src: '/img/Tupi_06.jpg',
             w: 1024,
             h: 718
+        }, {
+            src: '/img/Tupi_07.jpg',
+            w: 1363,
+            h: 2048
+        }, {
+            src: '/img/Tupi_08.jpg',
+            w: 1678,
+            h: 1116
+        }, {
+            src: '/img/Tupi_09.jpg',
+            w: 1988,
+            h: 1323
         }
     ];
 
@@ -52,5 +64,5 @@
         //options.getThumbBoundsFn = getThumbBoundsFn(e);
         let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
-    })
+    });
 })();
