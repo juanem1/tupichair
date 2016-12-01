@@ -16,7 +16,6 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "animate.css": "^3.5.2",
     "bulma": "^0.2.3",
     "jquery": "^3.1.1",
     "photoswipe": "^4.1.1"

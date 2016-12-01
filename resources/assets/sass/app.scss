@@ -2,10 +2,7 @@
 $mainDark: #1D1D1F;
 $background: #F3F3F3;
 
-// General 
-body {
-    background-color: $background;
-}
+// Mixins
 @mixin paralax($color) {
     background-attachment: fixed;
     background-position: center center;
@@ -19,14 +16,35 @@ body {
     width: 60%;
 }
 
+// Key frames
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+// General 
+body {
+    background-color: $background;
+}
+
 // Intro
 .intro {
     &.hero {
+        align-items: center;
         background-color: $mainDark;
+        justify-content: center;
     }
-    .image {
-        margin: 0 auto;
-        height: 400px;
+    .logo-text {
+        animation: fadein 2s ease-in-out;
+        background-image: url(/img/logo-text.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 230px;
         width: 400px;
     }
 }

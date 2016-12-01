@@ -12,7 +12,6 @@ elixir((mix) => {
   // Mix css styles
   mix.styles([
     './node_modules/bulma/css/bulma.css',
-    './node_modules/animate.css/animate.min.css',
     './node_modules/photoswipe/dist/photoswipe.css',
     './node_modules/photoswipe/dist/default-skin/default-skin.css',
     './public/css/app.css'
