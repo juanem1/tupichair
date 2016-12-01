@@ -87,6 +87,18 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
             src: '/img/Tupi_06.jpg',
             w: 1024,
             h: 718
+        }, {
+            src: '/img/Tupi_07.jpg',
+            w: 1363,
+            h: 2048
+        }, {
+            src: '/img/Tupi_08.jpg',
+            w: 1678,
+            h: 1116
+        }, {
+            src: '/img/Tupi_09.jpg',
+            w: 1988,
+            h: 1323
         }
     ];
 
@@ -112,7 +124,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
         //options.getThumbBoundsFn = getThumbBoundsFn(e);
         let gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
-    })
+    });
 })();
 
 //# sourceMappingURL=app.js.map
